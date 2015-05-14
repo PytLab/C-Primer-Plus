@@ -26,4 +26,6 @@ int main(void)
 
     printf("float_min: %e\n", float_min);
     printf("float_min/100.0f: %e\n", toosmall);
+
+    return 0;
 }
