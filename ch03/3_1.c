@@ -22,7 +22,7 @@ int main(void)
 
     /*测试浮点数下溢*/
     float float_min = 1.234567E-38;
-    float toosmall = float_min/10;           //指数部分已达最小，位数部分右移，精度损失
+    float toosmall = float_min/10;           //指数部分已达最小，尾数部分右移，精度损失
 
     printf("float_min: %e\n", float_min);
     printf("float_min/100.0f: %e\n", toosmall);
