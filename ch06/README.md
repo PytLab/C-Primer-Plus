@@ -6,7 +6,7 @@
 
 ![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch06/screenshots/6_1_out.gif)
 
-######## 4 ####_2####
+####6_2####
 
 ![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch06/screenshots/6_2_out.gif)
 
