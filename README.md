@@ -5,3 +5,4 @@ C Primer Plus 5 answers by **PytLab**
 
  - [第三章 数据和C](https://github.com/PytLab/C-Primer-Plus/tree/master/ch03)
  - [第四章 字符串和格式化输入/输出](https://github.com/PytLab/C-Primer-Plus/tree/master/ch04)
+ - [第五章 运算符、表达式和语句](https://github.com/PytLab/C-Primer-Plus/tree/master/ch05)
