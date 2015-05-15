@@ -29,3 +29,27 @@
 ####6_7####
 
 ![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch06/screenshots/6_7_out.gif)
+
+####6_9####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch09/screenshots/6_9_out.gif)
+
+####6_10####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch10/screenshots/6_10_out.gif)
+
+####6_11####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch11/screenshots/6_11_out.gif)
+
+####6_12####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch12/screenshots/6_12_out.gif)
+
+####6_13####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch13/screenshots/6_13_out.gif)
+
+####6_14####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch14/screenshots/6_14_out.gif)
