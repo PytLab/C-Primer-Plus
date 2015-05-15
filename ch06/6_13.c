@@ -5,15 +5,14 @@ int main(void)
 {
     double array1[SIZE], array2[SIZE];
     int count1, count2;
-    double f, sum;
+    double sum;
 
     /*设置数组的值*/
     puts("Enter 8 float numbers: ");
     for(count1 = 0; count1 <= SIZE - 1; count1++)
     {
         printf("Number %d: ", count1 + 1);
-        scanf("%lf", &f);
-        array1[count1] = f;
+        scanf("%lf", &array1[count1]);
     }
 
     /*设置第二个数组的值*/
