@@ -16,7 +16,7 @@
 
 ####7_4####
 
-![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/6_4_out.gif)
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/7_4_out.gif)
 
 ####7_5####
 
