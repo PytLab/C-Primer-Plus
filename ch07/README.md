@@ -25,3 +25,15 @@
 ####7_6####
 
 ![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/7_6_out.gif)
+
+####7_7####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/7_7_out.gif)
+
+####7_8####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/7_8_out.gif)
+
+####7_9####
+
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch07/screenshots/7_9_out.gif)
