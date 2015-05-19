@@ -17,7 +17,7 @@ int main(void)
     else
     {
         printf("2 ");
-        for(count = 3; count <= i; count += 2)
+        for(count = 3; count <= i; count += 2)  //只对奇数进行判断
         {
             if(isprime(count))
                 printf("%d ", count);
