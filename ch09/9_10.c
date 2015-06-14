@@ -26,6 +26,7 @@ long Fibonacci(int n)
         return 1;
     else
     {
+        /*使用循环代替递归*/
         for(i = 3, a = 1, b = 1; i <= n; i++)
         {
             r = a + b;
