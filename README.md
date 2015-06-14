@@ -9,3 +9,4 @@ C Primer Plus 5 answers by **PytLab**
  - [第六章 C控制语句: 循环](https://github.com/PytLab/C-Primer-Plus/tree/master/ch06)
  - [第七章 C控制语句: 分支和跳转](https://github.com/PytLab/C-Primer-Plus/tree/master/ch07)
  - [第八章 字符输入/输出和输入确认](https://github.com/PytLab/C-Primer-Plus/tree/master/ch08)
+ - [第九章 函数](https://github.com/PytLab/C-Primer-Plus/tree/master/ch09)
