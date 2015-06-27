@@ -40,8 +40,8 @@
 
 ####10_10####
 
-![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch09/screenshots/10_10_out.gif)
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch10/screenshots/10_10_out.gif)
 
 ####10_12_13####
 
-![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch09/screenshots/10_12_13_out.gif)
+![](https://github.com/PytLab/C-Primer-Plus/blob/master/ch10/screenshots/10_12_13_out.gif)
