@@ -11,7 +11,7 @@ double get_max(const double (*)[5], int);
 
 int main(void)
 {
-    double arr[3][5];  //分配数组
+    double arr[3][5];  // 分配数组
     int i, j;          // 用于循环计数
     double row_avg;    // 每个数集的平均值
     double avg;        // 整体的平均值
