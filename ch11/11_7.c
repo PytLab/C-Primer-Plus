@@ -53,8 +53,7 @@ char * string_in(char * longstr, char * shortstr)
                     break;
                 }
             }
-            if(in)
-                return longstr + i;  // 返回第一个字符的指针
+            if(in) return longstr + i;  // 返回第一个字符的指针
         }
     }
     /*如果主循环结束还是没有，返回NULL*/
