@@ -34,7 +34,7 @@ int * make_array(int elem, int val)
     int * pt;
     int i;
 
-    pt = (int *)malloc(elem*sizeof(int)); /*main()中释放*/
+    pt = (int *)malloc(elem * sizeof(int)); /*main()中释放*/
     if(pt)
     {
         for(i = 0; i < elem; i++)
