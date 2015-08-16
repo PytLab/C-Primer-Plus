@@ -130,33 +130,112 @@ void put_charmat(char mat[][COL], int m)
 
 void flatten(void)
 {
-    int i, j, avg;
+    int i, j, avg, left, up, right, down, center;
 
     for(i = 0; i < ROW; i++)
     {
         for(j = 0; j < COL; j++)
         {
+            center = mat[i][j];
             /*阵列四个顶角的元素*/
             if(i == 0 && j == 0)  /*左上*/
-                avg = (mat[i+1][j] + mat[i][j+1])/2;
+            {
+                down = mat[i+1][j];
+                right = mat[i][j+1];
+                if((center - down) > 1 && (center - down) > 1)
+                {
+                    avg = (down + right)/2;
+                    center = avg;
+                }
+            }
             else if(i == 0 && j == COL-1)  /*右上*/
-                avg = (mat[i][j-1] + mat[i+1][j])/2;
+            {
+                left = mat[i][j-1];
+                down = mat[i+1][j];
+                if((center - left) > 1 && (center - down) > 1)
+                {
+                    avg = (left + down)/2;
+                    center = avg;
+                }
+            }
             else if(i == ROW-1 && j == 0)  /*左下*/
-                avg = (mat[i-1][j] + mat[i][j+1])/2;
+            {
+                up = mat[i-1][j];
+                right = mat[i][j+1];
+                if((center - up) > 1 && (center - right) > 1)
+                {
+                    avg = (up + right)/2;
+                    center = avg;
+                }
+            }
             else if(i == ROW-1 && j == COL-1)  /*右下*/
-                avg = (mat[i-1][j] + mat[i][j-1])/2;
+            {
+                left = mat[i-1][j];
+                up = mat[i][j-1];
+                if((center - left) > 1 && (center - up) > 1)
+                {
+                    avg = (left + up)/2;
+                    center = avg;
+                }
+            }
             /*边界上的元素*/
             else if(j == 0 && i < ROW-1 && i > 0)  /*左边界*/
-                avg = (mat[i-1][j] + mat[i][j+1] + mat[i+1][j])/3;
+            {
+                up = mat[i-1][j];
+                right = mat[i][j+1];
+                down = mat[i+1][j];
+                if((center - up) > 1 && (center - right) > 1 && (center - down) > 1)
+                {
+                    center = (up + right + down)/3;
+                    center = avg;
+                }
+            }
             else if(i == 0 && j < COL-1 && j > 0)  /*上边界*/
-                avg = (mat[i][j-1] + mat[i+1][j] + mat[i][j+1])/3;
+            {
+                left = mat[i][j-1];
+                down = mat[i+1][j];
+                right = mat[i][j+1];
+                if((center - left) > 1 && (center - down) > 1 && (center - right) > 1)
+                {
+                    avg = (left + down + right)/3;
+                    center = avg;
+                }
+            }
             else if(j == COL-1 && i < ROW-1 && i > 0)  /*有边界*/
-                avg = (mat[i-1][j] + mat[i][j-1] + mat[i+1][j])/3;
+            {
+                up = mat[i-1][j];
+                left = mat[i][j-1];
+                down = mat[i+1][j];
+                if((center - up) > 1 && (center - left) > 1 && (center - down) > 1)
+                {
+                    avg = (up + left + down)/3;
+                    center = avg;
+                }
+            }
             else if(i == ROW-1 && j < COL-1 && j > 0)  /*下边界*/
-                avg = (mat[i][j-1] + mat[i-1][j] + mat[i][j+1])/3;
+            {
+                left = mat[i][j-1];
+                up = mat[i-1][j];
+                right = mat[i][j+1];
+                if((center - left) > 1 && (center - up) > 1 && (center - right) > 1)
+                {
+                    avg = (left + up + right);
+                    center = avg;
+                }
+            }
             else
-                avg = (mat[i-1][j] + mat[i][j-1] + mat[i+1][j] + mat[i][j+1])/4;
-            mat[i][j] = avg;
+            {
+                left = mat[i][j-1];
+                up = mat[i-1][j];
+                right = mat[i][j+1];
+                down = mat[i+1][j];
+                if((center - left) > 1 && (center - up) > 1 &&
+                   (center - right) > 1 && (center - down) > 1)
+                {
+                    avg = (left + up + right + down)/4;
+                    center = avg;
+                }
+            }
         }
     }
 }
