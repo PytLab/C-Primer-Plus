@@ -24,7 +24,7 @@ int main(void)
     long served = 0;         /*服务过的顾客数目      */
     long sum_line = 0;       /*累计的队列长度        */
 
-    InitialQueue(&line);     /*初始化队列*/
+    InitializeQueue(&line);     /*初始化队列*/
     srand(time(0));          /*初始化随机种子*/
     puts("Case study: Sigmund Lander's Advice Booth");
     puts("Enter the number if simulation hours: ");
@@ -58,5 +58,38 @@ int main(void)
         sum_line += QueueItemCount(&line);
     }
 
+    if(customers > 0)
+    {
+        printf("customers accepted: %ld\n", customers);
+        printf("customers served: %ld\n", served);
+        printf("turnaway: %ld\n", turnaway);
+        printf("average queue size: %lf\n", 
+               (double)sum_line / cyclelimit);
+        printf("average line wait time: %ld\n",
+               (double)line_wait / served);
+    }
+    else
+        puts("No customer.");
+    FreeQueue(&line);
+    puts("Bye!");
+
     return 0;
+}
+
+bool newcustomer(double x)
+{
+    if(rand()*x / RAND_MAX < 1)
+        return true;
+    else
+        return false;
+}
+
+Item customertime(long when)
+{
+    Item cust;
+
+    cust.processtime = rand() % 3 + 1;
+    cust.arrive = when;
+
+    return cust;
 }
