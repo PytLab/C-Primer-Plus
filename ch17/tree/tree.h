@@ -70,4 +70,15 @@ bool InTree(Item *, Tree *);
 /*        否则返沪false                   */
 bool DeleteItem(Item *, Tree *);
 
+/*操作: 把一个函数作用于树中的每个项目      */
+/*操作前: ptree指向一个初始化的树           */
+/*        pfun指向一个没有返回值的函数      */
+/*操作后: pfun指向函数被作用于树中的每个项目*/
+void Traverse(Tree *, void (*)(Item));
+
+/*操作：从树中删除所有节点　　　　　　　　　*/
+/*操作前: ptree指向一个树                   */
+/*操作后: 该树为空                          */
+void DeleteAll(Tree *);
+
 #endif

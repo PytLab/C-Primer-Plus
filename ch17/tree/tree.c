@@ -16,6 +16,10 @@ static void AddNode(Node *, Node *);
 static bool ToLeft(const Item *, const Item *);
 static bool ToRight(const Item *, const Item *);
 static void DeleteNode(Node **);
+static void InOrder(const Node *, void (*)(Item));
+static void InOrder2(const Node *, void (*)(Item));
+static void InOrder3(const Node *, void (*)(Item));
+static void DeleteAllNodes(Node *);
 
 /*初始化一棵树*/
 void InitializeTree(Tree * ptree)
@@ -242,5 +246,63 @@ static void DeleteNode(Node ** ptr)
         /*将左子树接到原有的父节点*/
         *ptr = (*ptr)->left;
         free(temp);
+    }
+}
+
+/*遍历树*/
+void Traverse(Tree * ptree, void (* pfunc)(Item item))
+{
+    if(ptree->root != NULL)
+        InOrder(ptree->root, pfunc);
+}
+
+static void InOrder(const Node * root, void (* pfunc)(Item))
+{   /*按左子树, 项目, 右子树的顺序*/
+    if(root != NULL)
+    {
+        InOrder(root->left, pfunc);
+        (*pfunc)(root->item);
+        InOrder(root->right, pfunc);
+    }
+}
+
+static void InOrder2(const Tree * ptree, void (* pfunc)(Item))
+{   /*按项目, 左子树, 右子树顺序*/
+    if(root != NULL)
+    {
+        (*pfunc)(root->item);
+        InOrder2(root->left, pfunc);
+        InOrder2(root->right, pfunc);
+    }
+}
+
+static void InOrder3(const Tree * ptree, void (* pfunc)(Item))
+{   /*按左子树, 右子树, 项目顺序*/
+    if(root != NULL)
+    {
+        InOrder3(root->left, pfunc);
+        InOrder3(root->right, pfunc);
+        (*pfunc)(root->item);
+    }
+}
+
+void DeleteAll(Tree * ptree)
+{
+    if(ptree->root != NULL)
+        DeleteAllNodes(ptree->root)
+    ptree->root = NULL;
+    ptree->size = 0;
+}
+
+static void DeleteAllNodes(Node * root)
+{
+    Node * pright;
+
+    if(root != NULL)
+    {
+        pright = root->right;
+        DeleteAllNodes(root->left);
+        free(root);
+        DeleteAllNodes(pright);
     }
 }
